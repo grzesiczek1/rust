@@ -1,0 +1,11 @@
+{
+    "cloudcode.profile-cluster-map": {
+        "[default]": "gke_firstcode-261112_europe-north1_workingcluster",
+        "cloudbuild": "gke_firstcode-261112_europe-north1_firstcluster"
+    },
+    "cloudcode.profile-registry-map": {
+        "[default]": "docker.io/grzesiczek1",
+        "cloudbuild": "gcr.io/firstcode-261112"
+    },
+    "aws.onDefaultRegionMissing": "add"
+}
