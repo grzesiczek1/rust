@@ -149,16 +149,16 @@ func (f *frontendServer) saveMessage(author, message string) error {
 	if err != nil {
 		return fmt.Errorf("failed to serialize message into json: %+v", err)
 	}
-resp, err := http.Post(fmt.Sprintf("http://%s/messages", f.backendAddr), "application/json", bytes.NewReader(body))
+	resp, err := http.Post(fmt.Sprintf("http://%s/messages", f.backendAddr), "application/json", bytes.NewReader(body))
 	if err != nil {
-		return fmt.Errrf("backend returned failure: %+v", err)
+		return fmt.Errorf("backend returned failure: %+v", err)
 	}
-	i resp.StatusCode != http.StatusOK {
+	if resp.StatusCode != http.StatusOK {
 		return fmt.Errorf("unexpected statuscode from backend: %d %v", resp.StatusCode, resp.Status)
 	}
-	dfer resp.Body.Close()
+	defer resp.Body.Close()
 	return nil
 }
 
-/ sinceDate is used in the html template to display human-friendly dates.
-func sinceDate(t time.Time) string { return time.Since(t).Truncate(time.Seond).String() }
+// sinceDate is used in the html template to display human-friendly dates.
+func sinceDate(t time.Time) string { return time.Since(t).Truncate(time.Second).String() }
