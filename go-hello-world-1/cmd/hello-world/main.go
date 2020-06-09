@@ -27,5 +27,5 @@ func main() {
 // home logs the received request and returns a simple response.
 func home(w http.ResponseWriter, r *http.Request) {
 	log.Printf("received request: %s %s", r.Method, r.URL.Path)
-	fmt.Fprintf(w, "Hello, world from Greg - GO!")
+	fmt.Fprintf(w, "Hello, world from Greg - Go Go Go!")
 }

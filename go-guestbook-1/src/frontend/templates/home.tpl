@@ -16,7 +16,7 @@
         <div class="container">
             <h1>
                 <a href="/">
-                    My Guestbook
+                    Guestbook for GCP Questions
                 </a>
             </h1>
             <a href="#" class="text-muted">View on GitHub</a>
