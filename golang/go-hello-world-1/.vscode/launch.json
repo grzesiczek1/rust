@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run/Debug on Kubernetes - cloudbuild",
+      "type": "cloudcode.kubernetes",
+      "request": "launch",
+      "skaffoldConfig": "${workspaceFolder}\\skaffold.yaml",
+      "profile": "cloudbuild",
+      "watch": true,
+      "cleanUp": true,
+      "portForward": true,
+      "imageRegistry": "gcr.io/firstcode-261112"
+    },
+    {
+      "type": "go",
+      "request": "launch",
+      "name": "Launch (local)",
+      "mode": "auto",
+      "program": "${workspaceFolder}/cmd/hello-world"
+    },
+    {
+      "type": "cloudcode",
+      "request": "attach",
+      "name": "Debug on Kubernetes",
+      "language": "Go",
+      "debugPort": 3000,
+      "localRoot": "${workspaceFolder}",
+      "podSelector": {
+        "app": "go-hello-world"
+      },
+      "remoteRoot": "/src/hello-world"
+    }
+  ]
+}
