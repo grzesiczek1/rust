@@ -1,39 +1,31 @@
+//There are many types of number, in Rust:
+//  - Unsigned Integers: u8, u16, u32, u64, usize, u128
+//  - Signed Integer: i8, i16, i32, i64, isize, i128
+//  -  Float: f32, f64
+
+
+
 fn main() {
-    let first_name = String::from("Greg").to_owned() + "Osin";
-    let name = &first_name;
-    println!("Hello, {}!", name);
-    println!("Hello, {}!", first_name);
+    return_value();
 }
-
-fn main() {
-    let mut first_name = String::from("Greg");
-    first_name.push_str(" Osin");
-
-    println!("Hello, {}!", first_name);
-}
-
-fn main() {
-    let first = "∞";
-    println!("{} {}",first.len(),first.chars().count())
-  
-  }
 
 // Lesson #26
-fn main() {
-
+fn return_value()-> usize {
+    24
 }
 
 #[cfg(test)]
 mod tests {
-  use crate::main;
+  use crate::return_value;
   #[test]
   fn main_returns_24() {
-    assert_eq!(main(), 24);
+    assert_eq!(return_value() as i32, 24);
   }
 }
 
+/*
 // Lesson #27
-fn main() -> f32 {
+fn main4() -> f32 {
     24.5
   }
   
@@ -43,17 +35,17 @@ fn main() -> f32 {
     #[test]
     #[should_panic]
     fn main_panics_with_i() {
-      assert_eq!(main() as usize as f32, main() as f32);
+      assert_eq!(main4() as usize as f32, main4() as f32);
     }
     #[test]
     fn main_returns_f() {
-      assert_eq!(main() as f32, 24.5);
+      assert_eq!(main4() as f32, 24.5);
     }
   }
 
   
 // Lesson #28
-fn main() -> f32 {
+fn main5() -> f32 {
     24.5
   }
   
@@ -69,11 +61,11 @@ fn main() -> f32 {
     #[test]
     #[should_panic]
     fn main_panics_with_i() {
-      assert_eq!(main() as usize as f32, main() as f32);
+      assert_eq!(main5() as usize as f32, main5() as f32);
     }
     #[test]
     fn main_returns_f() {
-      assert_eq!(main() as f32, 24.5);
+      assert_eq!(main5() as f32, 24.5);
     }
   
     #[test]
@@ -82,4 +74,5 @@ fn main() -> f32 {
       assert_eq!(out, ());
     }
   }
-  
+
+  */
