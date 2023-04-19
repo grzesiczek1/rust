@@ -18,16 +18,16 @@ PascalCase is used for types, traits, and enums (we will cover these later).
 */
 
 fn basic_strings() {
-  let first_name = String::from("Greg ").to_owned() + "Osinski";
-  let name = &first_name;
+    let first_name = String::from("Greg ").to_owned() + "Os";
+    let name = &first_name;
 
-  println!("Hello, {}!", name);
-  println!("Hello, {}!", first_name);
+    println!("Hello, {}!", name);
+    println!("Hello, {}!", first_name);
 }
 
 fn mutation() {
     let mut first_name = String::from("Greg ");
-    first_name.push_str("Osinski");
+    first_name.push_str("Os");
 
     println!("Hello, {}!", first_name);
 }
