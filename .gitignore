@@ -2,7 +2,7 @@
 # will have compiled files and executables
 debug/
 target/
-rust/Rustlings/target/debug/
+rust/Rustlings/target/debug/*
 
 # Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
 # More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
@@ -16,4 +16,3 @@ Cargo.lock
 
 # Visual Studio files
 .vscode/launch.json
-rust/Rustlings/target/debug/main.d
