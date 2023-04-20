@@ -16,3 +16,8 @@ Cargo.lock
 
 # Visual Studio files
 .vscode/launch.json
+
+
+# Added by cargo
+
+/target
